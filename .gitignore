@@ -1,5 +1,38 @@
-/.vs
-/SOLID.OCP/bin
-/SOLID.OCP/obj
-/SOLID.LSP/bin
-/SOLID.LSP/obj
+# Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output directories
+**/bin/
+**/obj/
+
+# Rider and Resharper
+.idea/
+*.DotSettings
+*.DotSettings.user
+
+# NuGet Packages
+packages/
+*.nupkg
+# Uncomment if you only want to exclude package downloads, not project dependencies
+# !packages/*.dll
+
+# Miscellaneous
+*.log
+*.tlog
+*.cache
+*.pdb
+*.pidb
+*.csproj.user
+*.dbmdl
+*.jfm
+
+# Local test/deployment settings
+appsettings.Development.json
+secrets.json
+
+# Node Modules (if using NodeJS)
+node_modules/
