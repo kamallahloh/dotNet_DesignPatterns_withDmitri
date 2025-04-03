@@ -38,7 +38,7 @@ namespace Creational
 
             foreach (var e in Elements)
                 sb.Append(e.ToStringImpl(indent + 1));
-
+ 
             sb.Append($"{i}</{Name}>\n");
             return sb.ToString();
         }
@@ -70,7 +70,7 @@ namespace Creational
         {
             var e = new HtmlElement(childName, childText);
             root.Elements.Add(e);
-            return this;
+            return this; // make it fluent by returning this as HtmlBuilder
         }
 
         public override string ToString()
@@ -120,7 +120,6 @@ namespace Creational
             builder.Clear(); // disengage builder from the object it's building, then...
             builder.AddChildFluent("li", "hello").AddChildFluent("li", "world");
             WriteLine(builder);
-
 
             Console.ReadLine();
         }
